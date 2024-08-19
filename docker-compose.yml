@@ -1,0 +1,21 @@
+version: '3.4'
+name: gerenciadorbiblioteca_container
+services:
+  nwe.gerenciadorbiblioteca.api:
+    image: ${DOCKER_REGISTRY-}nwegerenciadorbibliotecaapi
+    build:
+      context: .
+      dockerfile: src/NWE.GerenciadorBiblioteca.API/Dockerfile
+    depends_on:
+      - sqlserver
+  sqlserver:
+    container_name: sqlserver
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    hostname: 'sqlserver'
+    environment:
+      ACCEPT_EULA: 'Y'
+      SA_PASSWORD: "yourStrong(!)Password"
+    ports:
+      - '1433:1433'    
+    expose:
+      - 1433
