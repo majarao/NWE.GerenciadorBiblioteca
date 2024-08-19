@@ -3,7 +3,7 @@
 
 O desafio era desenvolver uma API de controle de empréstimo de livros.
 
-Foi utilizado arquitetura limpa, padrão repositoriy, fluent validation, e persistência dos dados no SQL Server com Entity Framework, além do suporte a Docker.
+Foi utilizado arquitetura limpa, padrão repository, fluent validation, e persistência dos dados no SQL Server com Entity Framework, além do suporte a Docker.
 
 <h3 align="left">Conecte comigo</h3>
 <p align="left">
